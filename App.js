@@ -51,7 +51,7 @@ render(){
     return(
         <Router>
             <Switch>
-                <Rounte exact path="/debits" render={DebitsComponent}/>
+                <Route exact path="/debits" render={DebitsComponent}/>
             </Switch>
         </Router>
     );
