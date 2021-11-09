@@ -1,5 +1,5 @@
 # Bank-of-React
 
-Github usernames: IlyaBaburashvili, lishannon 
+Github usernames: IlyaBaburashvili, lishannon, adamjoshuamohammad
 Page link:
 
