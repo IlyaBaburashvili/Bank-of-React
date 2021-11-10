@@ -1,3 +1,4 @@
+
 const Debits=(props) =>{
     let debitsView = () =>{
         const {debits} =props;
