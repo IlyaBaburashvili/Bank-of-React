@@ -1,4 +1,3 @@
-
 const Debits=(props) =>{
     let debitsView = () =>{
         const {debits} =props;
@@ -8,10 +7,23 @@ const Debits=(props) =>{
         })
     }
     return(
+        <form className = 'add-debit'>
         <div>
             <h1>Debits</h1>
             {debitsView()}
         </div>
+        <div className = 'description'>
+          <label>Description
+            <input type='text' placeholder='Description'/>
+          </label>
+        </div>
+        <div className = 'amount'>
+          <label>Amount
+            <input type='number' placeholder='Amount'/>
+          </label>
+        </div>
+        <input type='submit' value='Add'/>
+      </form>
     )
 }
 
