@@ -7,10 +7,23 @@ const Credits=(props) =>{
         })
     }
     return(
+        <form className = 'add-credit'>
         <div>
             <h1>Credits</h1>
             {creditsView()}
         </div>
+        <div className = 'description'>
+          <label>Description
+            <input type='text' placeholder='Description'/>
+          </label>
+        </div>
+        <div className = 'amount'>
+          <label>Amount
+            <input type='number' placeholder='Amount'/>
+          </label>
+        </div>
+        <input type='submit' value='Add'/>
+        </form>
     )
 }
 
