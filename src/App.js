@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, useState} from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import Home from './components/Home';
 import UserProfile from './components/UserProfile';
@@ -6,7 +6,7 @@ import LogIn from './components/Login';
 import axios from "axios";
 import Debits from './components/Debits';
 import Credits from './components/Credits';
-import AccountBalance from './components/AccountBalance';
+
 
 class App extends Component {
 
@@ -46,7 +46,10 @@ class App extends Component {
   }
 
    addDebit = (e) =>{
- 
+    const newdebit = {...this.state.debits}
+    console.log(newdebit)
+    newdebit.debits = e
+    this.setState({debits: newdebit})
   }
 
   addCredit = (e) =>{
@@ -60,11 +63,10 @@ class App extends Component {
   }
   
   render() {
-    const {debits,credits }=this.state;
+    const {debits,credits}=this.state;
     
     const CreditsComponent = () => (<Credits addCredit={this.addCredit}credits={credits}/>)
-    const DebitsComponent = () => (<Debits addDebit={this.addDebit}debits={debits}/>)
-
+    const DebitsComponent = () => (<Debits addDebit={this.addDebit}debits={debits} accountBalance={this.state.accountBalance}/>)
     const HomeComponent = () => (<Home accountBalance={this.state.accountBalance}/>);
     const UserProfileComponent = () => (
         <UserProfile userName={this.state.currentUser.userName} memberSince={this.state.currentUser.memberSince}  />

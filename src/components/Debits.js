@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom';
 import React, { useState } from 'react';
-
+import AccountBalance from './AccountBalance';
 // const handleChange = (e) => {
 //     console.log(e.target.value)
 // }
@@ -9,18 +9,20 @@ const handleSubmit = (e) => {
     e.preventDefault();
     var inputs = document.getElementsByTagName('input');
     var description = inputs[0].value
+
     var amount = inputs[1].value
     console.log(description,amount)
-    this.useState.addDebit(this.state.debitsView)
+    this.setState.addDebit(this.useState.debitsView)
 
 }
+
 
 const Debits=(props) =>{
     let debitsView = () =>{
         const {debits} =props;
         return debits.map((debit)=>{
             let date = debit.date.slice(0,10);
-            return <li key={debit.id}>{debit.amount} {debit.description} {date}</li>
+            return <li key={debit.id}>{debit.amount} {debit.description}{date}</li>
         })
     }
 
@@ -29,7 +31,9 @@ const Debits=(props) =>{
              <Link to="/">Return to Home</Link>
           <center><h1>Debits</h1>
             {debitsView()}
-            <br></br>
+            <br/>
+            <AccountBalance accountBalance={props.accountBalance} />
+            <br/>
     <form onSubmit = {handleSubmit}>
      <label>
         Description
