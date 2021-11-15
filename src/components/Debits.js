@@ -18,6 +18,8 @@ const handleSubmit = (e) => {
 
 
 const Debits=(props) =>{
+  const [description, setDescription] = useState('')
+  const [amount, setAmount] = useState('')
     let debitsView = () =>{
         const {debits} =props;
         return debits.map((debit)=>{
@@ -28,6 +30,7 @@ const Debits=(props) =>{
 
     return(
         <div>
+            <div style={{backgroundColor: 'grey'}}>
              <Link to="/">Return to Home</Link>
           <center><h1>Debits</h1>
             {debitsView()}
@@ -40,18 +43,19 @@ const Debits=(props) =>{
         <input
           type="text"
           name="Description"
-       />
+          value ={description} onChange={(e) => setDescription(e.target.value)}/>
       </label> 
       <label>
         Amount
            <input
           type="text"
            name="Amount"
-        />
+           value ={amount} onChange={(e) => setAmount(e.target.value)}/>
       </label>
       <button >Add Debits</button>
     </form>
             </center>
+            </div>
 
         </div>
         
