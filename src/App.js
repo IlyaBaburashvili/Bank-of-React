@@ -45,11 +45,14 @@ class App extends Component {
     this.setState({debits, credits,accountBalance});
   }
 
-   addDebit = (e) =>{
-    const newdebit = {...this.state.debits}
-    console.log(newdebit)
-    newdebit.debits = e
-    this.setState({debits: newdebit})
+   addDebit = (debit) =>{
+    const id = Math.floor(Math.random()*100000)+1
+    //const newdebit = {id, ...debit}
+   // setDebit([...debits, newdebit])
+   const newdebit = {...this.state.debits}
+   console.log(newdebit)
+   newdebit.debits = debit
+   this.setState({debits: newdebit})
   }
 
   addCredit = (e) =>{
