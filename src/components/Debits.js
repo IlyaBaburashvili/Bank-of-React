@@ -19,7 +19,7 @@ const handleSubmit = (e) => {
 
 const Debits=(props) =>{
   const [description, setDescription] = useState('')
-  const [amount, setAmount] = useState('')
+  const [amount, setAmount] = useState(0)
     let debitsView = () =>{
         const {debits} =props;
         return debits.map((debit)=>{
@@ -48,7 +48,7 @@ const Debits=(props) =>{
       <label>
         Amount
            <input
-          type="text"
+          type="number"
            name="Amount"
            value ={amount} onChange={(e) => setAmount(e.target.value)}/>
       </label>
