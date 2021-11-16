@@ -45,12 +45,37 @@ class App extends Component {
     this.setState({debits, credits,accountBalance});
   }
 
+  
    addDebit = (e) =>{
- 
+      let newDebit = {
+        'id': e.id,
+        'amount': e.amount,
+        'date': e.date,
+        'description': e.description
+      };
+
+      let updatedDebits = [...this.state.debits]
+      updatedDebits.push(newDebit);
+      this.setState({debits: updatedDebits})
+
+      let newBalance = Number(this.state.accountBalance) - Number(e.amount);
+      this.setState({accountBalance: newBalance})
   }
 
   addCredit = (e) =>{
- 
+    let newCredit = {
+      'id': e.id,
+      'amount': e.amount,
+      'date': e.date,
+      'description': e.description
+    };
+
+    let updatedCredits = [...this.state.credits]
+    updatedCredits.push(newCredit);
+    this.setState({credits: updatedCredits})
+
+    let newBalance = Number(this.state.accountBalance) + Number(e.amount);
+    this.setState({accountBalance: newBalance})
   }
 
   mockLogIn = (logInInfo) => {
