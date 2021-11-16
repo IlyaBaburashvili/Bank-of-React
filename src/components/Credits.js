@@ -12,7 +12,7 @@ const Credits=(props) =>{
     }
     return(
         <div>
-            <h1>Credits</h1>
+            <center> <h1>Credits</h1>
             {creditsView()}
             <br/>
             <AccountBalance accountBalance={props.accountBalance} />
@@ -34,6 +34,7 @@ const Credits=(props) =>{
       </label>
       <button >Add Credits</button>
     </form>
+    </center>
         </div>
     )
 }
