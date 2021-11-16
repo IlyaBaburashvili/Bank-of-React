@@ -48,37 +48,40 @@ class App extends Component {
   
    addDebit = (e) =>{
       e.preventDefault();
-      var description = e.target[0].value
-      var amount = e.target[1].value
-      console.log(description,amount)
+      var today = new Date();
+      // var description = e.target[0].value
+      // var amount = e.target[1].value
+      // console.log(description,amount)
       let newDebit = {
-        'id': e.id,
-        'amount': e.amount,
-        'date': e.date,
-        'description': e.description
+        'id': Math.floor(Math.random()*100000)+1,
+        'amount': e.target[1].value,
+        'date':   (today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate()),
+        'description': e.target[0].value
       };
 
       let updatedDebits = [...this.state.debits]
       updatedDebits.push(newDebit);
       this.setState({debits: updatedDebits})
 
-      let newBalance = Number(this.state.accountBalance) - Number(e.amount);
+      let newBalance = Number(this.state.accountBalance) - Number(e.target[1].value);
       this.setState({accountBalance: newBalance})
   }
 
   addCredit = (e) =>{
+    e.preventDefault();
+      var today = new Date();
     let newCredit = {
-      'id': e.id,
-      'amount': e.amount,
-      'date': e.date,
-      'description': e.description
+      'id': Math.floor(Math.random()*100000)+1,
+        'amount': e.target[1].value,
+        'date':   (today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate()),
+        'description': e.target[0].value
     };
 
     let updatedCredits = [...this.state.credits]
     updatedCredits.push(newCredit);
     this.setState({credits: updatedCredits})
 
-    let newBalance = Number(this.state.accountBalance) + Number(e.amount);
+    let newBalance = Number(this.state.accountBalance) + Number(e.target[1].value);
     this.setState({accountBalance: newBalance})
   }
 
@@ -91,7 +94,7 @@ class App extends Component {
   render() {
     const {debits,credits }=this.state;
     
-    const CreditsComponent = () => (<Credits addCredit={this.addCredit}credits={credits}/>)
+    const CreditsComponent = () => (<Credits addCredit={this.addCredit}credits={credits} accountBalance={this.state.accountBalance}/>)
     const DebitsComponent = () => (<Debits addDebit={this.addDebit}debits={debits} accountBalance={this.state.accountBalance}/>)
 
     const HomeComponent = () => (<Home accountBalance={this.state.accountBalance}/>);
