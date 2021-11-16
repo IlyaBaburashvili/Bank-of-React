@@ -47,6 +47,10 @@ class App extends Component {
 
   
    addDebit = (e) =>{
+      e.preventDefault();
+      var description = e.target[0].value
+      var amount = e.target[1].value
+      console.log(description,amount)
       let newDebit = {
         'id': e.id,
         'amount': e.amount,
@@ -88,7 +92,7 @@ class App extends Component {
     const {debits,credits }=this.state;
     
     const CreditsComponent = () => (<Credits addCredit={this.addCredit}credits={credits}/>)
-    const DebitsComponent = () => (<Debits addDebit={this.addDebit}debits={debits}/>)
+    const DebitsComponent = () => (<Debits addDebit={this.addDebit}debits={debits} accountBalance={this.state.accountBalance}/>)
 
     const HomeComponent = () => (<Home accountBalance={this.state.accountBalance}/>);
     const UserProfileComponent = () => (
