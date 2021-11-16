@@ -37,6 +37,7 @@ class LogIn extends Component {
 
     return (
       <div>
+        <center>
         <form onSubmit={this.handleSubmit}>
           <div>
             <label htmlFor="userName">User Name</label>
@@ -50,6 +51,7 @@ class LogIn extends Component {
         </form>
         
         <Link to="/">Return to Home</Link>
+        </center>
       </div>
     )
   }
