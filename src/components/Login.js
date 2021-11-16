@@ -2,6 +2,7 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import {Link} from 'react-router-dom';
+import './Login.css';
 
 class LogIn extends Component {
   constructor () {
@@ -39,7 +40,7 @@ class LogIn extends Component {
       <div>
         <center>
         <form onSubmit={this.handleSubmit}>
-          <div>
+          <div style={{backgroundColor: 'rgb(0, 250, 150)'}}>
             <h1>Login</h1>
             <label htmlFor="userName">User Name</label>
             <input type="text" name="userName" onChange={this.handleChange} value={this.state.user.userName} />
