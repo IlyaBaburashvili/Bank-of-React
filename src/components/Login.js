@@ -40,6 +40,7 @@ class LogIn extends Component {
         <center>
         <form onSubmit={this.handleSubmit}>
           <div>
+            <h1>Login</h1>
             <label htmlFor="userName">User Name</label>
             <input type="text" name="userName" onChange={this.handleChange} value={this.state.user.userName} />
           </div>
