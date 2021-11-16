@@ -28,7 +28,7 @@ const Credits=(props) =>{
       <label>
         Amount
            <input
-          type="text"
+          type="number"
            name="Amount"
         />
       </label>
