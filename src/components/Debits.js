@@ -1,3 +1,8 @@
+import {Link} from 'react-router-dom';
+import React from 'react';
+import AccountBalance from './AccountBalance';
+
+
 
 const Debits=(props) =>{
     let debitsView = () =>{
@@ -7,11 +12,36 @@ const Debits=(props) =>{
             return <li key={debit.id}>{debit.amount} {debit.description} {date}</li>
         })
     }
+
     return(
         <div>
-            <h1>Debits</h1>
+             <Link to="/">Return to Home</Link>
+          <center><h1>Debits</h1>
             {debitsView()}
+            <br/>
+            <AccountBalance accountBalance={props.accountBalance} />
+            <br/>
+    <form onSubmit = {props.addDebit}>
+     <label>
+        Description
+        <input
+          type="text"
+          name="Description"
+       />
+      </label> 
+      <label>
+        Amount
+           <input
+          type="number"
+           name="Amount"
+        />
+      </label>
+      <button >Add Debits</button>
+    </form>
+            </center>
+
         </div>
+        
     )
 }
 

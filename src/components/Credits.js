@@ -1,3 +1,7 @@
+import {Link} from 'react-router-dom';
+import React from 'react';
+import AccountBalance from './AccountBalance';
+
 const Credits=(props) =>{
     let creditsView = () =>{
         const {credits} =props;
@@ -8,8 +12,30 @@ const Credits=(props) =>{
     }
     return(
         <div>
-            <h1>Credits</h1>
+            <Link to="/">Return to Home</Link>
+            <center> <h1>Credits</h1>
             {creditsView()}
+            <br/>
+            <AccountBalance accountBalance={props.accountBalance} />
+            <br/>
+    <form onSubmit = {props.addCredit}>
+     <label>
+        Description
+        <input
+          type="text"
+          name="Description"
+       />
+      </label> 
+      <label>
+        Amount
+           <input
+          type="number"
+           name="Amount"
+        />
+      </label>
+      <button >Add Credits</button>
+    </form>
+    </center>
         </div>
     )
 }
