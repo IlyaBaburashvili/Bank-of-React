@@ -1,6 +1,7 @@
 import {Link} from 'react-router-dom';
 import React from 'react';
 import AccountBalance from './AccountBalance';
+import './account.css'
 
 const Credits=(props) =>{
     let creditsView = () =>{
@@ -11,8 +12,8 @@ const Credits=(props) =>{
         })
     }
     return(
-        <div>
-            <Link to="/">Return to Home</Link>
+        <div className = "summary">
+            <Link to="/"><button type="button"> Home </button></Link>
             <center> <h1>Credits</h1>
             {creditsView()}
             <br/>

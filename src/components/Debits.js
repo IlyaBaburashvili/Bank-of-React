@@ -1,8 +1,7 @@
 import {Link} from 'react-router-dom';
-import React from 'react';
+import React,{ Component } from 'react';
 import AccountBalance from './AccountBalance';
-
-
+import './account.css'
 
 const Debits=(props) =>{
     let debitsView = () =>{
@@ -14,8 +13,8 @@ const Debits=(props) =>{
     }
 
     return(
-        <div>
-             <Link to="/">Return to Home</Link>
+        <div className = "summary">
+             <Link to="/"><button type="button"> Home </button></Link>         
           <center><h1>Debits</h1>
             {debitsView()}
             <br/>
@@ -34,6 +33,8 @@ const Debits=(props) =>{
            <input
           type="number"
            name="Amount"
+           step="0.01"
+           pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
         />
       </label>
       <button >Add Debits</button>
