@@ -12,8 +12,10 @@ const Credits=(props) =>{
         })
     }
     return(
+        <>
+        <Link to="/"><button type="button"> Home </button></Link>
         <div className = "summary">
-            <Link to="/"><button type="button"> Home </button></Link>
+            
             <center> <h1>Credits</h1>
             {creditsView()}
             <br/>
@@ -37,7 +39,7 @@ const Credits=(props) =>{
       <button >Add Credits</button>
     </form>
     </center>
-        </div>
+        </div></>
     )
 }
 

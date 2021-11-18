@@ -13,8 +13,9 @@ const Debits=(props) =>{
     }
 
     return(
-        <div className = "summary">
-             <Link to="/"><button type="button"> Home </button></Link>         
+        <>
+        <Link to="/"><button type="button"> Home </button></Link>
+        <div className = "summary">        
           <center><h1>Debits</h1>
             {debitsView()}
             <br/>
@@ -41,7 +42,7 @@ const Debits=(props) =>{
     </form>
             </center>
 
-        </div>
+        </div></>
         
     )
 }
