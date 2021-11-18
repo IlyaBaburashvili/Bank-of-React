@@ -9,7 +9,7 @@ class Home extends Component {
         <div style={{backgroundColor: '#82CAFF'}}>
           <img src="https://letstalkpayments.com/wp-content/uploads/2016/04/Bank.png" alt="bank"/>
           <h1 style= {{"text-align": "center"}}>Bank of React</h1>
-          <p style= {{"text-align": "center"}}><Link to="/Bank-of-React/userProfile">User Profile</Link> &nbsp;&nbsp;<Link to="/LogIn">Login</Link> 
+          <p style= {{"text-align": "center"}}><Link to="/Bank-of-React/userProfile">User Profile</Link> &nbsp;&nbsp;<Link to="/Bank-of-React/LogIn">Login</Link> 
           &nbsp;&nbsp;<Link to="/Bank-of-React/Debits">Debit</Link>&nbsp;&nbsp;<Link to="/Bank-of-React/Credits">Credit</Link></p>
         
           <AccountBalance accountBalance={this.props.accountBalance}/>
