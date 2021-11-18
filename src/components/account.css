@@ -5,31 +5,12 @@ body{
 
 .summary {
     border: 2px solid #999;
-    /* background: rgba(242,220,177, .7); */
     background: rgb(140, 192, 236);
-    /* align-content: center; */
-    /* width:70%; */
-    /* padding-bottom: 1vw;
-    padding-top: 1vw;
-    padding-right: 5vw;
-    padding-left: 5vw;
-    border-radius: 5px;  */
-    /* position: absolute;
-    top: 10%;
-    left:10%; */
-    /* margin-top: -50px;
-    margin-left: -50px; */
-    /* width: 70%;
-    display: flex;
-    justify-content: center; */ 
     width: 600px;
-    /* height: 100px; */
     position: absolute;
     padding-bottom: 1vw;
     left: 30%;
     top: 10%;
     margin-top: -50px;
-
-    
     }
     
