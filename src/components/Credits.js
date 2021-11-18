@@ -12,7 +12,7 @@ const Credits=(props) =>{
     }
     return(
         <div>
-            <Link to="/">Return to Home</Link>
+            <Link to="/Bank-of-React">Return to Home</Link>
             <center> <h1>Credits</h1>
             {creditsView()}
             <br/>
