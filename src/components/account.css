@@ -1,0 +1,16 @@
+
+body{
+    background-color:#cee3f5;
+}
+
+.summary {
+    border: 2px solid #999;
+    background: rgb(140, 192, 236);
+    width: 600px;
+    position: absolute;
+    padding-bottom: 1vw;
+    left: 30%;
+    top: 10%;
+    margin-top: -50px;
+    }
+    

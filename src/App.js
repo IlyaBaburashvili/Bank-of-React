@@ -125,30 +125,3 @@ export default App;
 
  
  
- 
-//  render(){
-//     
-//       const HomeComponent = () => (<Home accountBalance={this.state.accountBalance}/>);
-//     //  const UserProfileComponent = () => (
-//     //      <UserProfile userName={this.state.currentUser.userName} memberSince={this.state.currentUser.memberSince}  />
-//     //  );
-
-//      return(
-//          <Router>
-           
-//              <div>
-//              <Route exact path="/" render={HomeComponent}/>
-//              </div>
-//             {/* <Route exact path="/userProfile" render={UserProfileComponent}/> */}
-             
-//              {/* <Switch>
-//                <Route exact path="/debits" render={DebitsComponent}/>
-//              </Switch> */}
-//          </Router>
-//      );
-//  }
-//  }
-
- 
-
-// export default App;
