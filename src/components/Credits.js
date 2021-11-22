@@ -13,9 +13,9 @@ const Credits=(props) =>{
     }
     return(
         <>
-        <Link to="/"><button type="button"> Home </button></Link>
+        <Link to="/Bank-of-React"><button type="button"> Home </button></Link>
+        
         <div className = "summary">
-            
             <center> <h1>Credits</h1>
             {creditsView()}
             <br/>

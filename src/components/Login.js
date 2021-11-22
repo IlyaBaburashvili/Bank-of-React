@@ -51,7 +51,7 @@ class LogIn extends Component {
           <button>Log In</button>
         </form>
         
-        <Link to="/">Return to Home</Link>
+        <Link to="/Bank-of-React">Return to Home</Link>
         </center>
       </div>
     )
